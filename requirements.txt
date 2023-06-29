@@ -1,5 +1,4 @@
 flask
 PyGithub
-github
 requests
 Werkzeug
