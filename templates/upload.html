@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Python Flask Multiple Files Upload Example</title>
+<h2>Upload Dashboard To Migrate</h2>
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <dl>
+		<p>
+			<input type="text" name="env" autocomplete="off" placeholder="Please Enter Environment" required>
+		</p>
+    </dl>
+    <dl>
+		<p>
+			<input type="text" name="company_id" autocomplete="off" placeholder="Please Enter Company Id" required>
+		</p>
+    </dl>
+    <dl>
+		<p>
+			<input type="text" name="email_id" autocomplete="off" placeholder="Please Enter Email Id" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
